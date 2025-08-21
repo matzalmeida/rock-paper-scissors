@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    gap: 0px;
+    color: #303030;
+    background-color: #909090;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    gap: 16px;
+    padding: 16px;
+}
+
+.stats div {
+    width: 96px;
+    border: 1px solid #303030;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.stats div h2 {
+    background-color: #303030;
+    border: 1px solid #303030;
+    border-radius: 8px 8px 0px 0px;
+    color: #ddd;
+    padding: 8px;
+}
+
+.stats div p {
+    padding: 8px;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    height: 80px;
+    flex-shrink: 0;
+    background-color: #303030;
+    color: #ddd;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+footer {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.prompt {
+    font-size: 24px;
+    width: 512px;
+    padding: 16px;
+}
+
+.prompt img {
+    width: 128px;
+    border-radius: 128px;
+    background-color: #303030;
+    border: 3px solid #303030;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+#message {
+    padding: 16px;
+    background-color: #303030;
+    border: 3px solid #303030;
+    color: #ddd;
+    border-radius: 16px;
+}
+
+#choices-after-game {
+    align-self: flex-end;
+    width: 354px;
+}
+
+button {
+    background-color: #303030;
+    border: 3px solid #303030;
+    color: #ddd;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.choices {
+    display: flex;
+    gap: 16px;
+}
+
+.imgBtn {
+    border: 3px solid #303030;
+    border-radius: 128px;
+    width: 116px;
+    background-color: #303030;
+    padding: 8px;
+    box-shadow: 5px 5px 5px #101010;
+}
+
+#question {
+    padding: 8px;
+    font-size: 20px;
+}
+
