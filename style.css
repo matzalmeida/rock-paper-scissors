@@ -107,6 +107,7 @@ button {
     color: #ddd;
     border-radius: 8px;
     padding: 8px 16px;
+    font-size: 18px;
 }
 
 .choices {
@@ -121,6 +122,10 @@ button {
     background-color: #303030;
     padding: 8px;
     box-shadow: 5px 5px 5px #101010;
+}
+
+.imgBtn:hover {
+    border-color: #ddd;
 }
 
 #question {
