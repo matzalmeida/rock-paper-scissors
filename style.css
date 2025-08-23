@@ -15,43 +15,6 @@ body {
     flex-direction: column;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
-    gap: 0px;
-    color: #303030;
-    background-color: #909090;
-}
-
-.stats {
-    display: flex;
-    justify-content: center;
-    align-self: flex-end;
-    gap: 16px;
-    padding: 16px;
-}
-
-.stats div {
-    width: 96px;
-    border: 1px solid #303030;
-    border-radius: 8px 8px 0px 0px;
-}
-
-.stats div h2 {
-    background-color: #303030;
-    border: 1px solid #303030;
-    border-radius: 8px 8px 0px 0px;
-    color: #ddd;
-    padding: 8px;
-}
-
-.stats div p {
-    padding: 8px;
-}
-
 header, footer {
     display: flex;
     justify-content: center;
@@ -63,23 +26,42 @@ header, footer {
     color: #ddd;
 }
 
-h1 {
+header h1 {
     font-size: 48px;
     font-weight: 900;
 }
 
-footer {
-    font-size: 18px;
-    font-weight: 300;
+main, #game, #challenge, #endScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.prompt {
-    font-size: 24px;
+#game, #challenge {
+    align-self: center;
+    flex-grow: 1;
+    justify-content: center;
     width: 512px;
     padding: 16px;
 }
 
-.prompt img {
+#game {
+    display: none;
+}
+
+#endScreen {
+    display: none;
+}
+
+main {
+    flex: 1;
+    gap: 0px;
+    color: #303030;
+    background-color: #909090;
+}
+
+#challenge img, .versus img, #endScreen img {
     width: 128px;
     border-radius: 128px;
     background-color: #303030;
@@ -88,26 +70,62 @@ footer {
     margin-bottom: 8px;
 }
 
-#message {
+#playButton, #playAgainButton {
+    padding: 8px 16px;
+    border: 3px solid #303030;
+    border-radius: 16px;
+    background-color: #303030;
+    box-shadow: 5px 5px 5px #101010;
+    color: #ddd;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 16px;
+}
+
+.versus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+}
+
+.name {
+    font-size: 24px;
+}
+
+.round-title {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #303030;
+    color: #ddd;
+    padding: 8px 16px;
+    border: 3px solid #303030;
+    border-radius: 16px;
+}
+
+#vsText {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+}
+
+#message, #challenge p, #endScreenText {
     padding: 16px;
     background-color: #303030;
     border: 3px solid #303030;
     color: #ddd;
     border-radius: 16px;
+    font-size: 24px;
 }
 
-#choices-after-game {
-    align-self: flex-end;
-    width: 354px;
-}
-
-button {
-    background-color: #303030;
-    border: 3px solid #303030;
-    color: #ddd;
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-size: 18px;
+#message {
+    margin: 16px 0px;
 }
 
 .choices {
@@ -124,8 +142,14 @@ button {
     box-shadow: 5px 5px 5px #101010;
 }
 
-.imgBtn:hover {
+.imgBtn:hover, #playButton:hover, #playAgainButton:hover {
     border-color: #ddd;
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.imgBtn:active, #playButton:active, #playAgainButton:active {
+    filter: brightness(0.8);
 }
 
 #question {
@@ -133,3 +157,33 @@ button {
     font-size: 20px;
 }
 
+#bottomRightPanel {
+    align-self: flex-end;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.stats div {
+    width: 72px;
+    border: 1px solid #303030;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.stats div h2 {
+    background-color: #303030;
+    border: 1px solid #303030;
+    border-radius: 8px 8px 0px 0px;
+    color: #ddd;
+    font-size: 16px;
+}
+
+footer {
+    font-size: 18px;
+    font-weight: 300;
+}

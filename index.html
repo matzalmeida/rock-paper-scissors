@@ -13,32 +13,50 @@
             <h1>Rock-Paper-Scissors</h1>
         </header>
         <main>
-            <div class="prompt">
+            <div id="challenge">
                 <img src="computer.png">
-                <p id="message">The Computer challenges you to a Rock-Paper-Scissors battle!</p>
-                <p id="question">What will you play?</p>
+                <p>The Computer challenges you to a Bo5 Rock-Paper-Scissors battle!</p>
+                <button id="playButton">Play ▶</button>
             </div>
-            <div class="choices">
-                <input class="imgBtn" id="rockBtn" type="image" src="rock.webp">
-                <input class="imgBtn" id="paperBtn" type="image" src="paper.png">
-                <input class="imgBtn" id="scissorsBtn" type="image" src="scissors.png">
-                <button hidden>New Game</button>
-            </div>
-            <div id="choices-after-game">
-                <button>Reset Stats</button>
-            </div>
-            <div class="stats">
-                <div class="win-stats">
-                    <h2>Wins</h2>
-                    <p id="winText">0</p>
+            <div id="game">
+                <h2 class="round-title">Round <span id="round">1</span></h2>
+                <div class="versus">
+                    <div class="player">
+                        <img src="you.webp">
+                        <span class="name">You</span>
+                    </div>
+                    <span id="vsText"><span id="scorePlayer">0</span> X <span id="scoreEnemy">0</span></span>
+                    <div class="player">
+                        <img src="computer.png">
+                        <span class="name">The Computer</span>
+                    </div>
                 </div>
-                <div class="draw-stats">
-                    <h2>Draws</h2>
-                    <p id="drawText">0</p>
+                <p id="message">You accepted the Bo5 Rock-Paper-Scissors battle!</p>
+                <p id="question">What's your next move?</p>
+                <div id="choices" class="choices">
+                    <input class="imgBtn" id="rockBtn" type="image" src="rock.webp">
+                    <input class="imgBtn" id="paperBtn" type="image" src="paper.png">
+                    <input class="imgBtn" id="scissorsBtn" type="image" src="scissors.png">
                 </div>
-                <div class="loss-stats">
-                    <h2>Losses</h2>
-                    <p id="lossText">0</p>
+                <div id="endScreen">
+                    <p id="endScreenText"></p>
+                    <button id="playAgainButton">Play Again ▶</button>
+                </div>
+            </div>
+            <div id="bottomRightPanel">
+                <div class="stats">
+                    <div class="win-stats">
+                        <h2>Wins</h2>
+                        <p id="winText">0</p>
+                    </div>
+                    <div class="draw-stats">
+                        <h2>Draws</h2>
+                        <p id="drawText">0</p>
+                    </div>
+                    <div class="loss-stats">
+                        <h2>Losses</h2>
+                        <p id="lossText">0</p>
+                    </div>
                 </div>
             </div>
         </main>
